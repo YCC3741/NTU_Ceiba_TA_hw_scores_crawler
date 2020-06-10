@@ -1,5 +1,5 @@
 # NTU_Ceiba_TA_hw_scores_crawler
-This is a tool, which is for Mac OS, help TAs to download the scores of assignment and transform score from grade to marks, collect them into a dataframe and export as .csv file.
+This is a tool for Mac OS, help TAs to download the scores of assignment, transform score from grade to marks, collect them into a dataframe and export it as .csv file.
 
 
 ## Requirements
@@ -11,12 +11,14 @@ This is a tool, which is for Mac OS, help TAs to download the scores of assignme
 - pandas
 - tqdm
 
+
 ```bash
 $ conda install -c conda-forge selenium
 $ conda install -c menpo pathlib
 $ conda install -c anaconda pandas
 $ conda install -c conda-forge tqdm
 ```
+
 
 ## Chrome driver
 You need Chrome driver which support  your Chrome version, you can find it here:
