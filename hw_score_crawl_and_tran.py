@@ -135,8 +135,12 @@ def output(output_file):
     output_file.to_csv("{}/students_scores.csv".format(output_path), encoding="utf_8_sig", index=False)
 
 
-all_score = crawler()
-final_score = transform(all_score)
-output(final_score)
+def main():
+    all_score = crawler()
+    final_score = transform(all_score)
+    output(final_score)
 
-print("<=== Program Done ===>")
+    print("<=== Program Done ===>")
+
+if __name__ == "__main__":
+    main()
