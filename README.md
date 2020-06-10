@@ -1,5 +1,5 @@
 # NTU_Ceiba_TA_hw_scores_crawler
-This is a tool for Mac OS, help TAs to download the scores of assignment, transform score from grade to marks, collect them into a dataframe and export it as .csv file.
+This tool, for Mac OS, help TAs to download the scores of assignment, transform scores from grade to marks, collect them into a dataframe and export it as .csv file.
 
 
 ## Requirements
