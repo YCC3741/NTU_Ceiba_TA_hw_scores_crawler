@@ -19,8 +19,8 @@ $ conda install -c conda-forge tqdm
 ```
 
 ## Chrome driver
-# You need Chrome driver which support  your Chrome version, you can find it here:
-# https://chromedriver.chromium.org/downloads
+You need Chrome driver which support  your Chrome version, you can find it here:
+https://chromedriver.chromium.org/downloads
 
 
 ## Using in Terminal
