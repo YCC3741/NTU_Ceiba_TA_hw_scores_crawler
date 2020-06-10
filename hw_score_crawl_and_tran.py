@@ -6,8 +6,8 @@ import random
 from time import sleep
 import sys
 import getpass
-
 import os
+
 from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
