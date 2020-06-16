@@ -104,9 +104,10 @@ def crawler():
 
         for score in scores:
             one_hw_score.append(score.get_attribute("value"))
-        all_score["{}".format(hw_name[i])] = one_hw_score 
-        
-        sleep(0.2)
+
+        all_score["{}".format(hw_name[i])] = one_hw_score
+
+        sleep(0.1)
 
         # go back two previous pages
         browser.execute_script("window.history.go(-2)")
@@ -119,10 +120,15 @@ def crawler():
 
 
 def transform(score_to_transform):
+    """
+    input: DataFrame
+    output: DataFrame
+    purpose: Convert grades to scores, and convert string representation of number to number.
+    """
     return score_to_transform.replace({"A+":95, "A":87, "A-":82,
                                        "B+":78, "B":75, "B-":70,
                                        "C+":68, "C":65, "C-":60,
-                                       "F":50, "X":0})
+                                       "F":50, "X":0}).apply(lambda x: pd.to_numeric(x, errors="ignore"))
 
 def output(output_file):
 
@@ -132,7 +138,7 @@ def output(output_file):
         if not os.path.exists(output_path):
             os.makedirs(output_path)
 
-    output_file.to_csv("{}/students_scores.csv".format(output_path), encoding="utf_8_sig", index=False)
+    output_file.to_excel("{}/students_hw_scores.xlsx".format(output_path), encoding="utf_8_sig", index=False)
 
 
 def main():
